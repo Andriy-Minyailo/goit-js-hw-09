@@ -11,11 +11,6 @@ const refs = {
     minutes: document.querySelector('[data-minutes]'),
     seconds: document.querySelector('[data-seconds]'),
 }
-refs.inputData.style.color = "green";
-refs.timer.style.display = "flex";
-refs.timer.style.gap = "15px";
-refs.timer.style.color = "blue";
-
 const date = new Date();
 const objectDate = {};
 const options = {
@@ -27,6 +22,11 @@ const options = {
     validationDate(selectedDates[0]);
       },
 };
+
+refs.inputData.style.color = "green";
+refs.timer.style.display = "flex";
+refs.timer.style.gap = "15px";
+refs.timer.style.color = "blue";
 
 refs.buttonTimerStart.setAttribute('disabled', '');
 
@@ -59,7 +59,7 @@ function onStartTimer(e) {
         if (deltaTimer <= 1000) {
             clearInterval(idInterval);
             Notify.success('Time is up!');
-            
+
             refs.inputData.removeAttribute('disabled');
             refs.inputData.style.color = "green";
             return;
