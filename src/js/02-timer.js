@@ -39,11 +39,11 @@ function validationDate(enteredDate) {
       } 
     refs.buttonTimerStart.removeAttribute('disabled');
     refs.buttonTimerStart.style.color = "red"
-    Object.finalDate = enteredDate;
+    objectDate.finalDate = enteredDate;
 }
 
 function onStartTimer(e) {
-    const objectFinalDate = Object.finalDate;
+    const objectFinalDate = objectDate.finalDate;
 
     refs.buttonTimerStart.setAttribute('disabled', '');
     refs.inputData.setAttribute('disabled', '');
